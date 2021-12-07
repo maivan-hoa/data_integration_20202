@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Data Integration | HUST </title>
+  <meta name="description" content="Simple library for flow programming. Drawflow allows you to create data flows easily and quickly.">
+  <link rel="shortcut icon" type="image/jpg" href="../static/image/favicon.jpg"/>
+
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/gh/jerosoler/Drawflow/dist/drawflow.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jerosoler/Drawflow/dist/drawflow.min.css">
+  <link rel="stylesheet" type="text/css" href="static/css/beautiful.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+  <header>
+    <h2>Nhóm 5</h2>
+    <!-- <div class="github-link"><a href="https://github.com/jerosoler/Drawflow" target="_blank"><i class="fab fa-github fa-3x"></i></a></div> -->
+    <!-- <div class="them-edit-link"><a href="https://jerosoler.github.io/drawflow-theme-generator/" target="_blank">🎨</a></div> -->
+  </header>
+
+<form method="post" enctype="multipart/form-data">
+
+    <div class="wrapper">
+    <div class="col">
+
+      <div class="drag-drawflow" draggable="true" ondragstart="drag(event)" data-node="flat_file_source">
+        <i class="fas fa-file-alt"></i><span> Flat File Source</span>
+      </div>
+
+      <div class="drag-drawflow" draggable="true" ondragstart="drag(event)" data-node="database_source">
+        <i class="fas fa-server"></i><span> Database Source</span>
+      </div>
+
+      <div class="drag-drawflow" draggable="true" ondragstart="drag(event)" data-node="flat_file_destination">
+        <i class="fas fa-file-download"></i><span> Flat File Destination</span>
+      </div>
+
+      <div class="drag-drawflow" draggable="true" ondragstart="drag(event)" data-node="database_destination">
+        <i class="fas fa-database"></i><span> Database Destination</span>
+      </div>
+
+      <div class="drag-drawflow" draggable="true" ondragstart="drag(event)" data-node="multicast">
+        <i class="fas fa-share-alt"></i><span> Multicast</span>
+      </div>
+
+      <div class="drag-drawflow" draggable="true" ondragstart="drag(event)" data-node="aggerate">
+        <i class="fas fa-plus"></i><span> Aggerate</span>
+      </div>
+
+      <!-- <div class="drag-drawflow" draggable="true" ondragstart="drag(event)" data-node="data_conversion">
+        <i class="fas fa-exchange-alt"></i><span> Data Conversion</span>
+      </div> -->
+
+      <div class="drag-drawflow" draggable="true" ondragstart="drag(event)" data-node="sort">
+        <i class="fas fa-sort"></i><span> Sort</span>
+      </div>
+
+      <div class="drag-drawflow" draggable="true" ondragstart="drag(event)" data-node="union_all">
+        <i class="fas fa-code-branch"></i><span> Union All</span>
+      </div>
+
+      <div class="drag-drawflow" draggable="true" ondragstart="drag(event)" data-node="derived_column">
+        <i class="fas fa-calculator"></i><span> Derived Column</span>
+      </div>
+
+      <div class="drag-drawflow" draggable="true" ondragstart="drag(event)" data-node="merge_join">
+        <i class="fas fa-angle-double-right"></i><span> Merge Join</span>
+      </div>            
+      
+      <div class="drag-drawflow" draggable="true" ondragstart="drag(event)" data-node="conditional_split">
+        <i class="fas fa-retweet"></i><span> Conditional Split</span>
+      </div>
+
+
+    </div>
+
+
+    <div class="col-right">
+      <div class="menu">
+        <ul>
+          <li onclick="editor.changeModule('Home'); changeModule(event);" class="selected">Data Flow</li>
+          <!-- <li onclick="editor.changeModule('Other'); changeModule(event);">Other Module</li> -->
+        </ul>
+      </div>
+
+      <!-- phần chứa nội dung kéo thả-->
+      <div id="drawflow" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+        <input type="submit" value="Execute" class="btn-export" >
+        <div class="btn-clear">Clear</div>
+        
+        <!-- <div class="btn-lock">
+          <i id="lock" class="fas fa-lock" onclick="editor.editor_mode='fixed'; changeMode('lock');"></i>
+          <i id="unlock" class="fas fa-lock-open" onclick="editor.editor_mode='edit'; changeMode('unlock');" style="display:none;"></i>
+        </div> -->
+        <div class="bar-zoom">
+          <i class="fas fa-search-minus"></i>
+          <i class="fas fa-search"></i>
+          <i class="fas fa-search-plus"></i>
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+</form>
+
+
+<!-- <script type="text/javascript" src="../static/js/control.js"></script> -->
+<script type="module" src="../static/js/control.js"></script>
+</body>
+</html>
+
