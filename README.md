@@ -20,21 +20,17 @@ $ python app.py
 4. Chú ý:
 - Muốn import ra file excel, cần tạo file trước (cả trong trường hợp lựa chọn ghi đè hay không ghi đè)
 
-## Đóng góp các chức năng
-1. Mai Văn Hòa - 20173122
+## Các chức năng
+
 - multicast:	Flat File --> Database + Flat File (1 - n)
 - sort  : 	Flat File --> Database
 - aggerate: 	Flat File / Database --> Flat File
 - union all: 	Flat File + Database --> Database 
 - derived column: Flat File / Database --> Flat File 
 - merge join: Flat File + Database --> Flat File
-
-2. Kiều Minh Hiếu - 20173111
 - conditional split: Flat File --> Flat File
 - derived column: Flat File --> Flat File
 - export: 	Database --> Flat File 
-
-3. Nguyễn Văn Hiểu - 20173120
 - import:	Flat File --> Database / Flat File (1 - 1) 
 - merge join: 	Flat File + Database --> Flat File
 - multicast:	Flat File --> Database + Flat File (1 - n)
